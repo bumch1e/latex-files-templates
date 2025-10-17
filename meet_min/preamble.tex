@@ -1,0 +1,37 @@
+%% packages
+\usepackage{babel}
+\usepackage{fourier}
+\usepackage{csquotes}
+\usepackage[colorlinks, urlcolor=blue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{xparse}
+
+%% styles
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[L]{Contexto}
+\fancyhead[R]{\today}
+
+\fancyfoot[C]{\thepage}
+
+\setlength{\parindent}{0pt}
+
+\renewcommand{\headrulewidth}{0.8pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+%% commands
+
+\newcommand{\hour}[2]{
+  \textbf{Hora de inicio:} #1\\
+  \textbf{Hora de termino:} #2
+
+}
+
+\newcommand{\context}[1]{
+  \fancyhead[L]{#1}
+}
+
+\newcommand{\task}[3]{
+  \textbf{#1:} #2. \textbf{Fecha límite}: #3.
+}
