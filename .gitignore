@@ -1,0 +1,4 @@
+# DOOM EMACS compilation files
+**/aux/
+**/auctex-auto/
+**/makefile
