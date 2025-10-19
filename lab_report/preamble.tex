@@ -1,0 +1,29 @@
+%% packages
+\usepackage[a4paper, left=21.3mm, right=21.3mm, top=15mm, bottom=15mm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage{xstring}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{fourier}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{sections/backmatter/references.bib}
+
+%% styles
+\setlength{\parindent}{0pt}
+
+%% commands
+\renewcommand{\arraystretch}{1.25}
+
+\newcommand{\epercent}[2]{
+\left|\frac{#1\hspace{0.1cm}-\hspace{0.1cm}#2}{#1}
+\right|\hspace{0.02cm}\cdot\hspace{0.02cm}100
+}
+
+\newcommand{\sciNot}[1]{\cdot\hspace{0.02cm}10^{#1}}
+
+

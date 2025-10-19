@@ -1,0 +1,29 @@
+\documentclass[10pt, a4paper]{article}
+
+\input{preamble}
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{2cm}
+        \input{sections/frontmatter/coverpage}
+    \end{center}
+    \input{sections/mainmatter/abstract}
+    \input{sections/mainmatter/objectives}
+\end{titlepage}
+
+\large
+\section*{Mediciones}
+\input{sections/mainmatter/measurements/materials}
+\input{sections/mainmatter/measurements/procedure}
+\input{sections/mainmatter/measurements/errors}
+\input{sections/mainmatter/measurements/figures}
+
+\input{sections/mainmatter/results}
+\input{sections/mainmatter/closure}
+
+\newpage
+\input{sections/backmatter/references}
+
+\end{document}
