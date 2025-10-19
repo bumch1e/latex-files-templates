@@ -1,0 +1,26 @@
+%% packages
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{xstring}
+\usepackage{geometry}
+
+%% styles
+\geometry{letterpaper, margin=2.5cm}
+\setlength{\parindent}{0pt}
+
+%% commands
+\renewcommand{\arraystretch}{1.25}
+
+\newcommand{\showImage}[4]{
+    \StrBehind{#3}{/}[\filenameTemp]
+    \StrBefore{\filenameTemp}{.}[\filename]
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=#1#2]{#3}
+        \caption{#4}
+        \label{fig:\filename}
+    \end{figure}
+}
