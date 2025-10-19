@@ -1,0 +1,57 @@
+%% packages
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{xcolor}
+\usepackage{xstring}
+\usepackage{enumitem}
+\usepackage{fourier}
+\usepackage{biblatex}
+\addbibresource{references.bib}
+
+%% styles
+\geometry{letterpaper, margin=2.5cm}
+
+\renewcommand{\footrulewidth}{1pt}
+
+\setlength{\headheight}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+%\fancyhead[L]{
+%    \includegraphics[width=1.5cm]{ruta/img.png}
+%}
+\fancyhead[C]{\textit{Título}}
+\fancyhead[R]{Autor}
+
+\fancyfoot[C]{\thepage}
+
+\titleformat{\section}{\Large\bfseries}
+{\thesection}{1em}{}
+\titleformat{\subsection}{\Large\bfseries}
+{\thesubsection}{1em}{}
+
+%% commands
+
+\newcommand{\showImage}[4]{
+    \StrBehind{#3}{/}[\filenameTemp]
+    \StrBefore{\filenameTemp}{.}[\filename]
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=#1#2]{#3}
+        \caption{#4}
+        \label{fig:\filename}
+    \end{figure}
+}
+
+
