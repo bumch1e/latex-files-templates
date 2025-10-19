@@ -2,3 +2,6 @@
 **/aux/
 **/auctex-auto/
 **/makefile
+
+# img
+**/img
